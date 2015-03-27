@@ -30,12 +30,18 @@
 	   
 	   <p>
 	      <input type="submit" value="Gravar"> 
+	      <input type="button"  onclick="envia()" value="Cancelar">
 	   </p>
 	   
 	
 	</form>    
     
-
+<script type="text/javascript">
+  function envia(){
+	  window.location.href =  'lista.jsp?cmd=lista';
+  }
+   
+</script>
 
 </body>
 </html>

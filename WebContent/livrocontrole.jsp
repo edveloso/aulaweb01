@@ -29,6 +29,13 @@
    	  String cmd = request.getParameter("cmd");
    	  String codigo = request.getParameter("codigo");
    	  
+   	  if("lista".equals(cmd)){
+   		  List<Livro> livros = dao.listar();
+	   	  session.setAttribute("livros", livros);
+	   	 request.getRequestDispatcher("lista.jsp")
+	   	 							.forward(request, response);
+   	  }
+   	  
    	  if("delete".equals(cmd)){
    		   Integer numCodigo = Integer.parseInt(codigo);
    		   dao.deletar(numCodigo); 

@@ -11,6 +11,11 @@
 </head>
 <body>
 
+		<%
+		LivroDAO dao = new LivroDAO();
+		List<Livro> livros = dao.listar();
+		%>
+
 	<h1>Lista de Livros</h1>
 	<br />
 	<br />
@@ -30,8 +35,7 @@
 		</tr>
 		
 		<% 
-   			List<Livro> livros = (List<Livro>) session
-   									.getAttribute("livros");
+   			
 		if(livros != null)
 			for(Livro livro : livros){
 		%>
