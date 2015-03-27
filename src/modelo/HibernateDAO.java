@@ -24,6 +24,7 @@ public abstract class HibernateDAO<T> implements DAO<T> {
 		session.getTransaction().commit();
 	}
 
+	
 	@Override
 	public void atualizar(T obj) {
 		session.beginTransaction();
